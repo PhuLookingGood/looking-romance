@@ -1,0 +1,11 @@
+.page {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(100px, 12vw, 170px) max(24px, calc((100% - 1100px) / 2)) 96px;
+  overflow: clip;
+  background: radial-gradient(ellipse at top, #2c1013, #0b0809 55%);
+}
+.header { padding-block-end: clamp(48px, 9vw, 100px); }
+.header h1 { margin: 0.3em 0 0; font: 400 clamp(5.5rem, 18vw, 15rem)/0.75 var(--brush); text-transform: uppercase; }
+.header p { margin-block-start: 1.4rem; color: #d2a5a3; letter-spacing: 0.2em; text-transform: uppercase; }
+.roster { display: grid; gap: clamp(64px, 12vw, 140px); }

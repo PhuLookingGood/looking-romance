@@ -1,0 +1,7 @@
+.anchor { display: none; position: fixed; z-index: 100; top: 0; left: 0; width: 0; height: 0; pointer-events: none; opacity: 0; transition: opacity 0.16s var(--ease); }
+.anchor[data-visible='true'] { opacity: 1; }
+.anchor > span { display: block; width: calc(20 * var(--u)); aspect-ratio: 1; translate: -50% -50%; border: 1px solid var(--white); border-radius: 50%; background: var(--cursor-fill); }
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  :global(html), :global(body), :global(body *) { cursor: none !important; }
+  .anchor { display: block; }
+}

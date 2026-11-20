@@ -1,0 +1,7 @@
+.letter { display: inline-block; }
+.clip { display: inline-block; height: 1em; overflow: hidden; }
+.track { display: block; transition: transform 0.5s var(--ease) var(--delay); }
+.track > span { display: block; height: 1em; }
+@media (hover: hover) and (pointer: fine) {
+  a:hover .track { transform: translateY(-1em); }
+}

@@ -1,0 +1,4 @@
+.probe { position: absolute; visibility: hidden; width: calc(100 * var(--u)); height: 0; }
+.wave { position: absolute; z-index: 1; left: 0; top: calc(620 * var(--u)); width: 100%; height: calc(54 * var(--u)); pointer-events: none; opacity: 0; transition: opacity 0.4s var(--ease); }
+.wave[data-playing='true'] { opacity: 1; }
+@media (max-width: 1023px) { .wave { top: calc(313 * var(--u)); } }

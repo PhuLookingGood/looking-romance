@@ -1,0 +1,59 @@
+:root {
+  --u: min(100vw / 1440, 100svh / 900);
+  --screen: calc(900 * var(--u));
+  --frame: min(100%, calc(1440 * var(--u)));
+  --edge: calc(40 * var(--u));
+  --black: #000;
+  --white: #f3eeeb;
+  --orange: #e13249;
+  --grey: #949494;
+  --clock-grey: #747474;
+  --pill-text: #a9a9a9;
+  --muted: rgb(255 255 255 / 50%);
+  --rule: #e5e7eb;
+  --rule-soft: rgb(229 231 235 / 50%);
+  --cursor-fill: var(--muted);
+  --sunset: linear-gradient(180deg, var(--black) 0%, #460d19 60%, #a81f37 100%);
+  --hero-shade: linear-gradient(180deg, var(--black), transparent);
+  --glow: rgb(225 50 73 / 44%);
+  --glow-edge: rgb(225 50 73 / 8%);
+  --display: 'Mona Sans', sans-serif;
+  --brush: 'Road Rage', var(--display);
+  --text: 'Geist', sans-serif;
+  --body: calc(18 * var(--u));
+  --small: calc(14 * var(--u));
+  --name-size: calc(196 * var(--u));
+  --statement-size: calc(96 * var(--u));
+  --statement-pitch: calc(88 * var(--u));
+  --release-size: calc(180 * var(--u));
+  --release-pitch: calc(160 * var(--u));
+  --tour-size: calc(96 * var(--u));
+  --menu-size: calc(96 * var(--u));
+  --menu-pitch: calc(118 * var(--u));
+  --pill-block: calc(16 * var(--u));
+  --pill-inline: calc(20 * var(--u));
+  --letter-in: letter-in;
+  --rise-in: rise-in;
+  --fade-in: fade-in;
+  --ease: cubic-bezier(0.44, 0, 0.56, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (max-width: 1023px) {
+  :root {
+    --u: min(100vw / 415, 100svh / 760);
+    --frame: 100%;
+    --edge: calc(20 * var(--u));
+    --body: calc(16 * var(--u));
+    --small: calc(13 * var(--u));
+    --name-size: calc(54 * var(--u));
+    --statement-size: calc(40 * var(--u));
+    --statement-pitch: calc(38 * var(--u));
+    --release-size: calc(72 * var(--u));
+    --release-pitch: calc(64 * var(--u));
+    --tour-size: calc(48 * var(--u));
+    --menu-size: calc(56 * var(--u));
+    --menu-pitch: calc(76 * var(--u));
+    --pill-block: calc(13 * var(--u));
+    --pill-inline: calc(16 * var(--u));
+  }
+}

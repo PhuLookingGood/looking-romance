@@ -1,0 +1,59 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; background: var(--black); }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body {
+  color: var(--white);
+  font: 400 var(--body)/1 var(--text);
+  letter-spacing: -0.045em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, p { margin: 0; }
+button, a { color: inherit; font: inherit; letter-spacing: inherit; }
+a { text-decoration: none; }
+button { background: none; border: 0; padding: 0; }
+img, canvas { display: block; }
+:focus-visible { outline: 2px solid var(--white); outline-offset: 4px; }
+.frame { position: relative; width: var(--frame); margin-inline: auto; height: 100%; }
+.trim, .trim-display { display: block; line-height: var(--lh, 1em); text-box: trim-both cap alphabetic; }
+.trim-display { font-family: var(--display); font-stretch: 87.5%; }
+@supports not (text-box: trim-both cap alphabetic) {
+  .trim { margin-block: calc(0.35em - var(--lh, 1em) / 2) calc(0.36em - var(--lh, 1em) / 2); }
+  .trim-display { margin-block: calc(0.344em - var(--lh, 1em) / 2) calc(0.385em - var(--lh, 1em) / 2); }
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pill-block) var(--pill-inline);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--black);
+  font-size: var(--body);
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover { background: var(--orange); color: var(--white); transform: scale(1.04); }
+}
+@keyframes letter-in {
+  from { opacity: 0; transform: translateY(130%); filter: blur(calc(40 * var(--u))); }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(calc(34 * var(--u))); }
+}
+@keyframes fade-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+html:has(dialog:modal),
+html:has(dialog:modal) body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html:has(dialog:modal) { scrollbar-gutter: stable; }
+
+dialog:modal { overscroll-behavior: contain; }
